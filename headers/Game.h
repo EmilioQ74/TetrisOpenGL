@@ -16,16 +16,18 @@ private:
     int speed;
     int CubePosX;
     int CubePosY;
+    bool isOutside();
+    void CubeRotate();
+    void LockCube();
+    bool CubesFit();
 public:
     Board board;
     Game(/* args */);
     void Draw();
-    bool isOutside();
+    
     void MoveDown();
     void MoveLeft();
     void MoveRight();
-    void CubeRotate();
-    void LockCube();
     void KeyHandler(unsigned char key, int x, int y);
     Cubes AddRandomBlock();
     std::vector<Cubes> GetAllBlocks();

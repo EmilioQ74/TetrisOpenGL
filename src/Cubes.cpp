@@ -63,7 +63,7 @@ std::vector<Position> Cubes::getPositions()
 
 int Cubes::getID() const
 {
-    this->id;    
+    return id;    
 }
 
 int Cubes::getCurrentState()

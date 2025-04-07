@@ -35,7 +35,7 @@ bool Game::isOutside()
 void Game::MoveDown()
 {
     currentBlock.Move(1, 0);
-    if (isOutside())
+    if (isOutside() || !CubesFit())
     {
         currentBlock.Move(-1, 0);
         LockCube();
@@ -45,7 +45,7 @@ void Game::MoveDown()
 void Game::MoveLeft()
 {
     currentBlock.Move(0, -1);
-    if (isOutside())
+    if (isOutside() || !CubesFit())
     {
         currentBlock.Move(0, 1);
     }
@@ -54,7 +54,7 @@ void Game::MoveLeft()
 void Game::MoveRight()
 {
     currentBlock.Move(0, 1);
-    if (isOutside())
+    if (isOutside() || !CubesFit())
     {
         currentBlock.Move(0, -1);
     }
@@ -65,7 +65,7 @@ void Game::MoveRight()
 void Game::CubeRotate()
 {
     currentBlock.Rotate();
-    if (isOutside())
+    if (isOutside() || !CubesFit())
     {
         currentBlock.UndoRotate();
     }
@@ -79,6 +79,21 @@ void Game::LockCube()
     board.insetBlock(item.row, item.column, currentBlock.getID());
     }
     currentBlock = AddRandomBlock();
+    if(!CubesFit())board.Reset();
+    board.ClearFullRow();
+
+}
+
+bool Game::CubesFit()
+{
+    std::vector<Position> tetriminosPos = currentBlock.getPositions();
+    for(Position item:tetriminosPos)
+    {
+        if(board.isCellEmpty(item.row,item.column)==false){
+            return false;
+        }
+    }
+    return true;
 }
 
 void Game::KeyHandler(unsigned char key, int x, int y)
@@ -103,6 +118,7 @@ void Game::KeyHandler(unsigned char key, int x, int y)
 Cubes Game::AddRandomBlock()
 {
     //old system with only random blocks
+    srand(time(0));
     int index = rand() % nextBlocks.size();
     Cubes block = nextBlocks[index];
     return block;

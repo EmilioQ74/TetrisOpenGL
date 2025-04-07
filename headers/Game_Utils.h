@@ -7,14 +7,14 @@
 #include <vector>
 #include <iostream>
 // Define the width and height of the window
-#define WINDOW_WIDTH 1920   // Set the width of the window to 1920 pixels
-#define WINDOW_HEIGHT 1080  // Set the height of the window to 1080 pixels
+#define WINDOW_WIDTH 400   // Set the width of the window to 1920 pixels
+#define WINDOW_HEIGHT 600  // Set the height of the window to 1080 pixels
 
 // Define the number of rows and columns for the grid
 #define ROW 20      // Set the number of rows to 20
 #define COLUMN 10   // Set the number of columns to 10
 
-#define LINE_WIDTH 2
+#define LINE_WIDTH 1
 
 // Define the position of the first cell
 #define CELL_POS_X BORDER_LEFT  // Set the x position of the first cell to the left border
@@ -26,7 +26,7 @@
 
 // Define the border dimensions and positions
 #define BORDER_WIDTH 400 // Set the width of the border to 400 pixels
-#define BORDER_HEIGHT 600   // Set the height of the border to 600 pixels
+#define BORDER_HEIGHT 600 // Set the height of the border to 600 pixels
 
 // Calculate the positions of the borders based on the window dimensions and border dimensions
 #define BORDER_LEFT (WINDOW_WIDTH/2-BORDER_WIDTH/2)  // Calculate the x position of the left border to center it horizontally
@@ -37,3 +37,9 @@
 #define BORDER_BOTTOM (BORDER_TOP+BORDER_HEIGHT)  // Calculate the y position of the bottom border
 
 #endif // GAME_UTILS_H
+
+
+
+//need fixing rotate when is on wall 
+//add score just for dispalying
+//and random nextBlock

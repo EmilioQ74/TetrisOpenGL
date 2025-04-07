@@ -1,6 +1,6 @@
 CMakeFiles/Tetris.dir/src/main.cpp.obj: \
- C:\Projects\OPENGL\CPP\Mingw64\Tetris\src\main.cpp \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game_Utils.h \
+ C:\Users\emq74\Projects\OPENGL\TetrisOpenGL\src\main.cpp \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Game_Utils.h \
  C:/msys64/mingw64/include/GL/glut.h \
  C:/msys64/mingw64/include/GL/freeglut_std.h \
  C:/msys64/mingw64/include/windows.h C:/msys64/mingw64/include/_mingw.h \
@@ -21,9 +21,7 @@ CMakeFiles/Tetris.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/driverspecs.h \
  C:/msys64/mingw64/include/winnt.h \
  C:/msys64/mingw64/include/_mingw_unicode.h \
- C:/msys64/mingw64/include/ctype.h \
- C:/msys64/mingw64/include/corecrt_wctype.h \
- C:/msys64/mingw64/include/apiset.h \
+ C:/msys64/mingw64/include/ctype.h C:/msys64/mingw64/include/apiset.h \
  C:/msys64/mingw64/include/psdk_inc/intrin-impl.h \
  C:/msys64/mingw64/include/basetsd.h C:/msys64/mingw64/include/guiddef.h \
  C:/msys64/mingw64/include/string.h \
@@ -194,14 +192,10 @@ CMakeFiles/Tetris.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/winnls.h \
  C:/msys64/mingw64/include/datetimeapi.h \
  C:/msys64/mingw64/include/stringapiset.h \
- C:/msys64/mingw64/include/wincon.h \
- C:/msys64/mingw64/include/wincontypes.h \
- C:/msys64/mingw64/include/consoleapi.h \
- C:/msys64/mingw64/include/consoleapi2.h \
- C:/msys64/mingw64/include/consoleapi3.h \
- C:/msys64/mingw64/include/winver.h C:/msys64/mingw64/include/winreg.h \
- C:/msys64/mingw64/include/reason.h C:/msys64/mingw64/include/winnetwk.h \
- C:/msys64/mingw64/include/wnnc.h C:/msys64/mingw64/include/virtdisk.h \
+ C:/msys64/mingw64/include/wincon.h C:/msys64/mingw64/include/winver.h \
+ C:/msys64/mingw64/include/winreg.h C:/msys64/mingw64/include/reason.h \
+ C:/msys64/mingw64/include/winnetwk.h C:/msys64/mingw64/include/wnnc.h \
+ C:/msys64/mingw64/include/virtdisk.h \
  C:/msys64/mingw64/include/stralign.h \
  C:/msys64/mingw64/include/sec_api/stralign_s.h \
  C:/msys64/mingw64/include/winsvc.h C:/msys64/mingw64/include/mcx.h \
@@ -306,7 +300,6 @@ CMakeFiles/Tetris.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/_timeval.h \
  C:/msys64/mingw64/include/pthread_time.h \
  C:/msys64/mingw64/include/pthread_compat.h \
- C:/msys64/mingw64/include/sched.h \
  C:/msys64/mingw64/include/pthread_unistd.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.h \
@@ -339,10 +332,10 @@ CMakeFiles/Tetris.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/istream \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Board.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game_Utils.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Colors.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Cubes.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Position.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Blocks.h
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Game.h \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Board.h \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Game_Utils.h \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Colors.h \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Cubes.h \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Position.h \
+ C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/headers/Blocks.h
