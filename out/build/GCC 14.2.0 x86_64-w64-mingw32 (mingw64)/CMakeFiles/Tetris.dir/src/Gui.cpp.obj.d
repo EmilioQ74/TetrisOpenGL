@@ -1,5 +1,7 @@
-CMakeFiles/Tetris.dir/src/Board.cpp.obj: \
- C:\Projects\OPENGL\CPP\Mingw64\Tetris\src\Board.cpp \
+CMakeFiles/Tetris.dir/src/Gui.cpp.obj: \
+ C:\Projects\OPENGL\CPP\Mingw64\Tetris\src\Gui.cpp \
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Gui.h \
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Board.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game_Utils.h \
  C:/msys64/mingw64/include/GL/glut.h \
@@ -342,4 +344,5 @@ CMakeFiles/Tetris.dir/src/Board.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Colors.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Cubes.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Position.h
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Position.h \
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Blocks.h

@@ -18,6 +18,8 @@ Cubes::~Cubes()
 
 void Cubes::setState(int state)
 {
+    if(state > 3)state = 0;
+    if(state < 0)state = 3;
     this->state = state;
 }
 
@@ -45,7 +47,7 @@ void Cubes::Draw()
     for(Position item: tetriminoPos)
     {
         glColor4fv(colors[id]);
-        glRectd(item.column*CELL_SIZE_WIDTH + CELL_POS_X, item.row*CELL_SIZE_HEIGHT + CELL_POS_Y+1, item.column*CELL_SIZE_WIDTH + BORDER_LEFT + CELL_SIZE_WIDTH-1, item.row*CELL_SIZE_HEIGHT + BORDER_TOP + CELL_SIZE_HEIGHT);
+        glRectd(item.column*CELL_SIZE_WIDTH + CELL_POS_X+LINE_WIDTH, item.row*CELL_SIZE_HEIGHT + CELL_POS_Y+LINE_WIDTH, item.column*CELL_SIZE_WIDTH + BORDER_LEFT + CELL_SIZE_WIDTH-LINE_WIDTH, item.row*CELL_SIZE_HEIGHT + BORDER_TOP + CELL_SIZE_HEIGHT-LINE_WIDTH);
     }
 }
 

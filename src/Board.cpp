@@ -26,30 +26,6 @@ void Board::initialize()
 }
 void Board::drawBoard()
 {
-    glColor3fv(colors[COLOR_WHITE]);
-    glRectd(BORDER_LEFT,BORDER_TOP,BORDER_RIGHT,BORDER_BOTTOM);
-    //int lines = BORDER_LEFT;
-    // //COLUMNS
-    // for(int i = 0; i <= COLUMN; i++)
-    // {
-    //     glBegin(GL_LINES);
-    //     glColor4fv(colors[COLOR_WHITE]);
-    //     glVertex2f(lines, BORDER_TOP);
-    //     glVertex2f(lines, BORDER_TOP + ROW*CELL_SIZE_HEIGHT);
-    //     lines += CELL_SIZE_WIDTH;
-    //     glEnd();
-    // }
-    // //ROWS
-    // lines = BORDER_TOP;
-    // for(int i = 0; i <= ROW; i++)
-    // {
-    //     glBegin(GL_LINES);
-    //     glColor4fv(colors[COLOR_WHITE]);
-    //     glVertex2f(BORDER_LEFT, lines);
-    //     glVertex2f(BORDER_LEFT + COLUMN*CELL_SIZE_WIDTH, lines);
-    //     lines += CELL_SIZE_HEIGHT;
-    //     glEnd();
-    // }
     for(int i = 0; i < ROW ; i++)
         {
             for(int j = 0; j<COLUMN; j++)
@@ -108,7 +84,7 @@ void Board::Reset()
 void Board::DrawCell(int row,int column)
 {
     glColor4fv(colors[board[row][column]]);
-    glRectd(column*CELL_SIZE_WIDTH + CELL_POS_X + LINE_WIDTH, row*CELL_SIZE_HEIGHT + CELL_POS_Y+LINE_WIDTH, column*CELL_SIZE_WIDTH + BORDER_LEFT -1+ CELL_SIZE_WIDTH-LINE_WIDTH-LINE_WIDTH, row*CELL_SIZE_HEIGHT + BORDER_TOP + CELL_SIZE_HEIGHT-LINE_WIDTH-1);
+    glRectd(column*CELL_SIZE_WIDTH + CELL_POS_X + LINE_WIDTH, row*CELL_SIZE_HEIGHT + CELL_POS_Y+LINE_WIDTH, column*CELL_SIZE_WIDTH + BORDER_LEFT + CELL_SIZE_WIDTH-LINE_WIDTH, row*CELL_SIZE_HEIGHT + BORDER_TOP + CELL_SIZE_HEIGHT-LINE_WIDTH);
 }
 
 bool Board::isRowFull(int row)

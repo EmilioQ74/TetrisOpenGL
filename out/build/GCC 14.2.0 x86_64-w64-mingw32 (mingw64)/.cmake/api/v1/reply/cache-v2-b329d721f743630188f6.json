@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/emq74/Projects/OPENGL/TetrisOpenGL/out/build/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)"
+			"value" : "c:/Projects/OPENGL/CPP/Mingw64/Tetris/out/build/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "29"
+			"value" : "31"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "UNINITIALIZED",
+			"type" : "STRING",
 			"value" : "C:/msys64/mingw64/bin/g++.exe"
 		},
 		{
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/out/build/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/pkgRedirects"
+			"value" : "C:/Projects/OPENGL/CPP/Mingw64/Tetris/out/build/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/emq74/Projects/OPENGL/TetrisOpenGL"
+			"value" : "C:/Projects/OPENGL/CPP/Mingw64/Tetris"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -527,7 +527,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/out/install/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)"
+			"value" : "C:/Projects/OPENGL/CPP/Mingw64/Tetris/out/install/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -959,7 +959,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/CMake/share/cmake-3.29"
+			"value" : "C:/Program Files/CMake/share/cmake-3.31"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1255,7 +1255,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/emq74/Projects/OPENGL/TetrisOpenGL/out/build/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)"
+			"value" : "C:/Projects/OPENGL/CPP/Mingw64/Tetris/out/build/GCC 14.2.0 x86_64-w64-mingw32 (mingw64)"
 		},
 		{
 			"name" : "Tetris_IS_TOP_LEVEL",
@@ -1279,7 +1279,19 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/emq74/Projects/OPENGL/TetrisOpenGL"
+			"value" : "C:/Projects/OPENGL/CPP/Mingw64/Tetris"
+		},
+		{
+			"name" : "_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

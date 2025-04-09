@@ -36,6 +36,9 @@ BlockO::BlockO()
 {
   id = 4;
   pos[0]={Position{0,0},Position{0,1},Position{1,0},Position{1,1}};
+  pos[1]={Position{0,0},Position{0,1},Position{1,0},Position{1,1}};
+  pos[2]={Position{0,0},Position{0,1},Position{1,0},Position{1,1}};
+  pos[3]={Position{0,0},Position{0,1},Position{1,0},Position{1,1}};
   Move(0,4);
 }
 

@@ -1,15 +1,15 @@
 #include "Game_Utils.h"
 #include "Game.h"
-
+#include "Gui.h"
 
 static Game game;
-
+Gui gui;
 double lastUpdateTime = 0;
 
-bool SlowUpdate(double interval)
+bool SlowUpdate(double speed)
 {
     double currentTime = glutGet(GLUT_ELAPSED_TIME);
-    if(currentTime - lastUpdateTime >= interval)
+    if(currentTime - lastUpdateTime >= 500-(speed*10))
     {
         lastUpdateTime = currentTime;
         return true;
@@ -24,19 +24,21 @@ void keyboard(unsigned char key, int x, int y) {
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-   
+    glClearColor(0, 0.027, 0.278, 1);
     game.Draw();
+    const char* scoreText = ("Score: " + std::to_string(50)).c_str();
+    gui.renderText(30, 80, scoreText);
     glutSwapBuffers();
 }
 
 void update(int value) {
     glutTimerFunc(16, update, 0);
-    if(SlowUpdate(200)) game.MoveDown();
+    if(SlowUpdate(game.getSpeed())) game.MoveDown();
     glutPostRedisplay();
 }
 void init() {
     lastUpdateTime = glutGet(GLUT_ELAPSED_TIME);
-    glClearColor(0.0, 0.0, 0.0, 0.0);
+    glClearColor(0, 0, 0, 0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(0.0, (GLdouble)WINDOW_WIDTH, (GLdouble)WINDOW_HEIGHT, 0.0);
