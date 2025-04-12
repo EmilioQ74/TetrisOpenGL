@@ -4,12 +4,16 @@
 //constructor
 Game::Game()
 {
-    speed = 1;
-    cubeState = 0;
+    PlaySound(MUSIC_PLAY, NULL, SND_ASYNC | SND_LOOP);
+    GameOver = false;
+    dropDown = false;
+    score = 0;
+    speed = 20;
     board = Board();
+    gui = Gui();
     cubes = GetAllBlocks();
-    nextBlocks = GetAllBlocks();
     currentBlock = AddRandomBlock();
+    nextBlock = AddRandomBlock();
 }
 
 Game::~Game()
@@ -19,16 +23,20 @@ Game::~Game()
 //draw the game
 void Game::Draw()
 {
-    
     board.drawBoard();
     currentBlock.Draw();
+    gui.Draw(nextBlock, score);
 }
-void Game::setSpeed(int speed)
+// set the speed of the game
+void Game::setSpeed()
 {
-    if(speed < 1)speed = 1;
-    this->speed = speed;
+    if (score > 1000) speed = 25;
+    if (score > 2000) speed = 30;
+    if (score > 3000) speed = 35;
+    if (score > 5000) speed = 40;
+    if (score > 10000) speed = 45;
 }
-
+//get the speed
 int Game::getSpeed() const
 {
     return speed;
@@ -46,46 +54,78 @@ bool Game::isOutside()
 //move the tetrimino down
 void Game::MoveDown()
 {
-    currentBlock.Move(1, 0);
-    if (isOutside() || !CubesFit())
+    if(GameOver)
     {
-        currentBlock.Move(-1, 0);
-        LockCube();
+        return;
+    }
+    if (!GameOver)
+    {
+        while (dropDown)
+        {
+            currentBlock.Move(1, 0);
+            score++;
+            if (isOutside() || !CubesFit())
+            {
+                currentBlock.Move(-1, 0);
+                LockCube();
+            }
+        }
+        currentBlock.Move(1, 0);
+        score++;
+        if (isOutside() || !CubesFit())
+        {
+            currentBlock.Move(-1, 0);
+            LockCube();
+        }
     }
 }
 //move the tetrimino to the left
 void Game::MoveLeft()
 {
-    currentBlock.Move(0, -1);
-    if (isOutside() || !CubesFit())
+    if (!GameOver)
     {
-        currentBlock.Move(0, 1);
+        currentBlock.Move(0, -1);
+        if (isOutside() || !CubesFit())
+        {
+            currentBlock.Move(0, 1);
+        }
+
     }
+    
+    
 }
 //move the tetrimino to the right
 void Game::MoveRight()
 {
-    currentBlock.Move(0, 1);
-    if (isOutside() || !CubesFit())
+    if (!GameOver)
     {
-        currentBlock.Move(0, -1);
+        currentBlock.Move(0, 1);
+        if (isOutside() || !CubesFit())
+        {
+            currentBlock.Move(0, -1);
+        }
     }
 }
+
 
 
 //rotate the tetrimino 
 void Game::CubeRotate()
 {
-    currentBlock.Rotate();
-    if (isOutside())
-    {
-        FixPosition();
-    }
-    if(!CubesFit())
-    {
-        currentBlock.UndoRotate();
+    if (!GameOver)
+    {    
+        currentBlock.Rotate();
+        if (isOutside())
+        {
+            FixPosition();
+        }
+        if(!CubesFit())
+        {
+            currentBlock.UndoRotate();
+        }
     }
 }
+
 //lock the tetrimino and add it to the board by the id value 
 void Game::LockCube()
 {
@@ -94,11 +134,20 @@ void Game::LockCube()
     {
     board.insetBlock(item.row, item.column, currentBlock.getID());
     }
-    currentBlock = AddRandomBlock();
-    if(!CubesFit())board.Reset();
-    board.ClearFullRow();
+    dropDown = false;
+    currentBlock = nextBlock;
+    setSpeed();
+    int rowCleared = board.ClearFullRow();
+    if(rowCleared > 0)
+    {
+        score += rowCleared*100;
+    }
+    nextBlock = AddRandomBlock();
+    if(!CubesFit()) GameOver = true;
 
 }
+
+
 //check if the tetimino collide with other tetrimino so it can't move
 bool Game::CubesFit()
 {
@@ -123,13 +172,11 @@ void Game::FixPosition()
             {
                 currentBlock.setState(currentBlock.getCurrentState());
                 currentBlock.Move(0,1);
-                printf("Current State: %d\n",currentBlock.getCurrentState());
             }
             if(item.column>=COLUMN)
             {
                 currentBlock.setState(currentBlock.getCurrentState());
                 currentBlock.Move(0,-1);
-                printf("Current State: %d\n",currentBlock.getCurrentState());
             }
         }
     }
@@ -137,18 +184,52 @@ void Game::FixPosition()
 
 void Game::KeyHandler(unsigned char key, int x, int y)
 {
+    if(GameOver && key == 'r') {
+        GameOver = false;
+        reset();
+    }
+    if(GameOver) return;
     switch(key)
     {
         case 'w':
+        case 'W':
             CubeRotate();
             break;
         case 's':
+        case 'S':
             MoveDown();
             break;
         case 'a':
+        case 'A':
             MoveLeft();
             break;
         case 'd':
+        case 'D':
+            MoveRight();
+            break;
+        case ' ':
+            dropDown = true;
+            MoveDown();
+            break;
+    }
+   
+}
+
+void Game::SpecialKeyHandler(int key, int x, int y)
+{
+    if(GameOver) return;
+    switch(key)
+    {
+        case GLUT_KEY_UP:
+            CubeRotate();
+            break;
+        case GLUT_KEY_DOWN:
+            MoveDown();
+            break;
+        case GLUT_KEY_LEFT:
+            MoveLeft();
+            break;
+        case GLUT_KEY_RIGHT:
             MoveRight();
             break;
     }
@@ -156,31 +237,29 @@ void Game::KeyHandler(unsigned char key, int x, int y)
 
 Cubes Game::AddRandomBlock()
 {
-    //old system with only random blocks
+    if(cubes.size() == 1)
+    {
+        Cubes lastBlock = cubes[0];
+        cubes.clear();
+        cubes = GetAllBlocks();
+        return lastBlock;
+    }
     srand(time(0));
-    int index = rand() % nextBlocks.size();
-    Cubes block = nextBlocks[index];
+    int index = rand() % cubes.size();
+    Cubes block = cubes[index];
+    cubes.erase(cubes.begin() + index);
     return block;
 }
-
-Cubes Game::AddToTheList()
-{
-    srand(time(0));
-    int index = rand() % nextBlocks.size();
-    Cubes block = nextBlocks[index];
-    nextBlocks.erase(nextBlocks.begin() + index);
-    return block;
-}
-
 std::vector<Cubes> Game::GetAllBlocks()
 {
-    return {BlockI(), BlockJ(), BlockL(), BlockO(), BlockS(), BlockT(), BlockZ()};
+    return {BlockI(), BlockJ(), BlockL(), BlockO(), BlockS(), BlockT(), BlockZ(),BlockI(), BlockJ(), BlockL(), BlockO(), BlockS(), BlockT(), BlockZ()};
 }
 
 void Game::reset()
 {
    board.initialize();
    cubes = GetAllBlocks();
-   nextBlocks = GetAllBlocks();
    currentBlock = AddRandomBlock();
+   score = 0;
+   speed = 20;
 }

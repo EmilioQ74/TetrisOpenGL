@@ -1,7 +1,7 @@
 #pragma once
 
 // Define total number of colors
-#define TOTAL_COLORS 9
+#define TOTAL_COLORS 10
 
 // Define color indexes
 #define COLOR_BLACK   0
@@ -13,6 +13,7 @@
 #define COLOR_PURPLE  6
 #define COLOR_RED     7
 #define COLOR_WHITE   8
+#define COLOR_LIGHT_BLUE 9
 
 // Define the colors array using macros
 #define COLORS { \
@@ -24,7 +25,8 @@
     {0.0f, 1.0f, 0.0f, 1.0f}, /* GREEN */   \
     {1.0f, 0.0f, 1.0f, 1.0f}, /* PURPLE */  \
     {1.0f, 0.0f, 0.0f, 1.0f}, /* RED */     \
-    {1.0f, 1.0f, 1.0f, 1.0f}  /* WHITE */   \
+    {1.0f, 1.0f, 1.0f, 1.0f}, /* WHITE */   \
+    {0.5f, 0.5f, 1.0f, 1.0f}  /* LIGHT BLUE */  \
 }
 
 const float colors[TOTAL_COLORS][4] = COLORS;

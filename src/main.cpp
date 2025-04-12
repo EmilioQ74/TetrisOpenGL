@@ -1,9 +1,11 @@
 #include "Game_Utils.h"
+#include "Music.h"
 #include "Game.h"
-#include "Gui.h"
+
+
 
 static Game game;
-Gui gui;
+
 double lastUpdateTime = 0;
 
 bool SlowUpdate(double speed)
@@ -21,13 +23,14 @@ bool SlowUpdate(double speed)
 void keyboard(unsigned char key, int x, int y) {
     game.KeyHandler(key, x, y);
 }
+void special(int key, int x, int y){
+    game.SpecialKeyHandler(key, x, y);
+} 
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glClearColor(0, 0.027, 0.278, 1);
     game.Draw();
-    const char* scoreText = ("Score: " + std::to_string(50)).c_str();
-    gui.renderText(30, 80, scoreText);
     glutSwapBuffers();
 }
 
@@ -72,6 +75,7 @@ int main(int argc, char** argv)
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
+    glutSpecialFunc(special);
     glutMainLoop();
     return 0;
 }

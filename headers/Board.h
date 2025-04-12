@@ -22,7 +22,5 @@ public:
     bool isCellEmpty(int row,int column);
     bool isOutside(int row, int column);
     int ClearFullRow();
-    void Reset();
-
     void printBoard();
 };

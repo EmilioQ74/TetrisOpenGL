@@ -339,6 +339,26 @@ CMakeFiles/Tetris.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/istream \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Music.h \
+ C:/msys64/mingw64/include/windows.h C:/msys64/mingw64/include/mmsystem.h \
+ C:/msys64/mingw64/include/mmsyscom.h C:/msys64/mingw64/include/mciapi.h \
+ C:/msys64/mingw64/include/mmiscapi.h \
+ C:/msys64/mingw64/include/mmiscapi2.h \
+ C:/msys64/mingw64/include/playsoundapi.h \
+ C:/msys64/mingw64/include/mmeapi.h C:/msys64/mingw64/include/timeapi.h \
+ C:/msys64/mingw64/include/joystickapi.h \
+ C:/msys64/mingw64/include/c++/14.2.0/thread \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/std_thread.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/this_thread_sleep.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ratio \
+ C:/msys64/mingw64/include/c++/14.2.0/cstdint \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/msys64/mingw64/include/stdint.h \
+ C:/msys64/mingw64/include/c++/14.2.0/limits \
+ C:/msys64/mingw64/include/c++/14.2.0/ctime \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Board.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game_Utils.h \
@@ -346,4 +366,19 @@ CMakeFiles/Tetris.dir/src/main.cpp.obj: \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Cubes.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Position.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Blocks.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Gui.h
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Gui.h \
+ C:/msys64/mingw64/include/c++/14.2.0/cmath \
+ C:/msys64/mingw64/include/math.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc

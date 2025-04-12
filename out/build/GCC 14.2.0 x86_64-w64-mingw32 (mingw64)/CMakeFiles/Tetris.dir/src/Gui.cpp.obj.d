@@ -1,8 +1,6 @@
 CMakeFiles/Tetris.dir/src/Gui.cpp.obj: \
  C:\Projects\OPENGL\CPP\Mingw64\Tetris\src\Gui.cpp \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Gui.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Board.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Game_Utils.h \
  C:/msys64/mingw64/include/GL/glut.h \
  C:/msys64/mingw64/include/GL/freeglut_std.h \
@@ -345,4 +343,19 @@ CMakeFiles/Tetris.dir/src/Gui.cpp.obj: \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Colors.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Cubes.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Position.h \
- C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Blocks.h
+ C:/msys64/mingw64/include/c++/14.2.0/cmath \
+ C:/msys64/mingw64/include/math.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
+ C:/msys64/mingw64/include/c++/14.2.0/limits \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc

@@ -2,6 +2,8 @@
 #include "Board.h"
 #include "Blocks.h"
 #include "Cubes.h"
+#include "Gui.h"
+#include "Music.h"
 #include "Game_Utils.h"
 
 
@@ -10,29 +12,32 @@ class Game
 private:
     std::vector<Cubes> cubes;
     Cubes currentBlock;
-    std::vector<Cubes> nextBlocks;
-    int cubeState;
+    Cubes nextBlock;
+    Gui gui;
     int score;
     int speed;
-    int CubePosX;
-    int CubePosY;
+    bool GameOver;
+    bool dropDown;
+    std::thread musicThread;
     bool isOutside();
     void CubeRotate();
     void LockCube();
     bool CubesFit();
     void FixPosition();
     Cubes AddRandomBlock();
-    Cubes AddToTheList();
+    
 public:
     Board board;
     Game(/* args */);
     void Draw();
-    void setSpeed(int speed);
+    int getScore() const;
+    void setSpeed();
     int getSpeed() const;
     void MoveDown();
     void MoveLeft();
     void MoveRight();
     void KeyHandler(unsigned char key, int x, int y);
+    void SpecialKeyHandler(int key, int x, int y);
     std::vector<Cubes> GetAllBlocks();
     void reset();
     ~Game();

@@ -345,7 +345,7 @@ CMakeFiles/Tetris.dir/src/Game.cpp.obj: \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Cubes.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Position.h \
  C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Blocks.h \
- C:/msys64/mingw64/include/c++/14.2.0/random \
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Gui.h \
  C:/msys64/mingw64/include/c++/14.2.0/cmath \
  C:/msys64/mingw64/include/math.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
@@ -362,9 +362,26 @@ CMakeFiles/Tetris.dir/src/Game.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+ C:/Projects/OPENGL/CPP/Mingw64/Tetris/headers/Music.h \
+ C:/msys64/mingw64/include/windows.h C:/msys64/mingw64/include/mmsystem.h \
+ C:/msys64/mingw64/include/mmsyscom.h C:/msys64/mingw64/include/mciapi.h \
+ C:/msys64/mingw64/include/mmiscapi.h \
+ C:/msys64/mingw64/include/mmiscapi2.h \
+ C:/msys64/mingw64/include/playsoundapi.h \
+ C:/msys64/mingw64/include/mmeapi.h C:/msys64/mingw64/include/timeapi.h \
+ C:/msys64/mingw64/include/joystickapi.h \
+ C:/msys64/mingw64/include/c++/14.2.0/thread \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/std_thread.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/this_thread_sleep.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ratio \
  C:/msys64/mingw64/include/c++/14.2.0/cstdint \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  C:/msys64/mingw64/include/stdint.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ctime \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+ C:/msys64/mingw64/include/c++/14.2.0/random \
  C:/msys64/mingw64/include/c++/14.2.0/bits/random.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/opt_random.h \

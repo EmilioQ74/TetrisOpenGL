@@ -6,6 +6,7 @@
 #include <map>
 #include <vector>
 #include <iostream>
+
 // Define the width and height of the window
 #define WINDOW_WIDTH 800   // Set the width of the window to 1920 pixels
 #define WINDOW_HEIGHT 700  // Set the height of the window to 1080 pixels
